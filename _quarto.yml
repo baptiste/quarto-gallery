@@ -1,0 +1,29 @@
+project:
+  type: website
+
+
+website:
+  favicon: favicon.ico
+  title: "photo/"
+  description: "example photo gallery"
+  page-footer: "Copyright 2023 © baptiste" 
+  navbar:
+    right:      
+      - icon: camera-fill
+        text: Kaikoura
+        href: kaikoura/index.html
+      - icon: camera-fill
+        text: Ushuaia
+        href: ushuaia/index.html
+
+
+format:
+  html:
+    theme: litera
+    fontsize: 1.4rem
+    linestretch: 1.4
+    toc: true
+
+execute:
+  freeze: false
+
