@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This is a Quarto website.</p>
 <div class="gallery page-columns page-full">
 <div class="column-page">
-<p><a href="../photos/ushuaia/web-01.jpg" class="lightbox" data-gallery="ushuaia-gallery"><img src="../photos/ushuaia/web-01.jpg" class="img-fluid" style="column-span: all;"></a> <a href="../photos/ushuaia/web-02.jpg" class="lightbox" data-gallery="ushuaia-gallery"><img src="../photos/ushuaia/web-02.jpg" class="img-fluid" style="column-span: none;"></a> <a href="../photos/ushuaia/web-03.jpg" class="lightbox" data-gallery="ushuaia-gallery"><img src="../photos/ushuaia/web-03.jpg" class="img-fluid" style="column-span: none;"></a></p>
+<p><a href="photos/ushuaia/web-01.jpg" class="lightbox" data-gallery="ushuaia-gallery"><img src="photos/ushuaia/web-01.jpg" class="img-fluid" style="column-span: all;"></a> <a href="photos/ushuaia/web-02.jpg" class="lightbox" data-gallery="ushuaia-gallery"><img src="photos/ushuaia/web-02.jpg" class="img-fluid" style="column-span: none;"></a> <a href="photos/ushuaia/web-03.jpg" class="lightbox" data-gallery="ushuaia-gallery"><img src="photos/ushuaia/web-03.jpg" class="img-fluid" style="column-span: none;"></a></p>
 </div>
 </div>
 
@@ -544,7 +544,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
