@@ -1,0 +1,48 @@
+---
+format:
+  html:
+    keep-md: false
+    theme: litera
+    css: ../gallery.css
+    toc: false
+title: kaikoura
+album: kaikoura
+editor: source
+lightbox: auto
+---
+
+:::{.column-page  style="background-image: url('../images/white_wall_hash.webp');"}
+![](../images/kaikoura.svg){width=60% style="margin-left: auto; margin-right: auto;display: block;" .nolightbox fig-alt='kaikoura'}
+:::
+
+
+::: gallery
+
+::: column-page
+
+
+```{r, results='asis', echo=FALSE, warning=FALSE, message=FALSE}
+library(glue)
+library(fs)
+library(here)
+album = rmarkdown::metadata$album
+localurl =  path('../photos/', album)
+photos = fs::dir_ls(path = localurl, glob = '*.jpg')
+# baseurl = glue('https://xxxxxxx.cloudfront.net/photos/{album}')
+baseurl = localurl
+if(file.exists('custom_order')){
+reordering = intersect(as.integer(readLines('custom_order')), seq_along(photos))
+photos = photos[reordering]
+}
+  
+for (i in seq_along(photos)){
+  if(i %in% c(1)) span = 'all' else span = 'none'
+
+  cat(glue('![]({{ baseurl }}/{{ fs::path_file(photos[i]) }}){.lightbox style="column-span: {{ span }};" group="kaikoura-gallery"}', .open = '{{', .close = '}}'), '
+')
+
+}
+```
+:::
+
+:::

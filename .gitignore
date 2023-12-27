@@ -1,2 +1,5 @@
 /.quarto/
 .Rproj.user
+_site/
+site_libs/
+photos/

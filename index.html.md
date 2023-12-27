@@ -8,6 +8,8 @@ format:
 lightbox: true
 ---
 
+
+
 This is a Quarto website.
 
 
